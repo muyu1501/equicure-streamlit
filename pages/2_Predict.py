@@ -20,6 +20,9 @@ st.set_page_config(
     layout="wide"
 )
 
+apply_global_style()
+sidebar_summary()
+
 # ── Header ────────────────────────────────────────────────────────────────────
 page_header(
     "ED Wait-Time Prediction",
