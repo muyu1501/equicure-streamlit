@@ -11,6 +11,7 @@ Original file is located at
 
 import streamlit as st
 
+from style import apply_global_style, page_header, sidebar_summary, COLOR
 
 st.set_page_config(
     page_title="About",
