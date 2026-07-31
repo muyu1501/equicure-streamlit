@@ -12,6 +12,8 @@ import pandas as pd
 import numpy as np
 import joblib
 
+from style import apply_global_style, page_header, sidebar_summary, COLOR
+
 st.set_page_config(
     page_title="Predict Wait Time",
     page_icon="🤖",
