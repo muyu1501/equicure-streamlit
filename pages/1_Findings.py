@@ -56,15 +56,18 @@ def load_shap_ranking(file_path: Path) -> pd.DataFrame:
     return data.dropna(subset=["Feature", "Mean |SHAP|"])
 
 
-st.title("Equity Findings")
-st.markdown(
-    "SHAP feature analysis · Subgroup error · Geographic disparity"
+page_header(
+    "Equity Findings",
+    "SHAP feature analysis, subgroup error, and geographic disparity patterns."
 )
-st.divider()
+
+k1, k2, k3 = st.columns(3)
+k1.metric("Overall RMSE", "44.73 min")
+k2.metric("Equity Threshold", "15% above RMSE")
+k3.metric("Primary Subgroup", "Income Quartile")
 
 st.info(
-    "Income quartile and ownership type are among the strongest "
-    "predictors of wait time."
+    "This page explains which features influenced wait-time predictions and whether model error differed across equity-relevant groups."
 )
 
 
@@ -102,6 +105,9 @@ fig_rank.update_layout(
 
 st.plotly_chart(fig_rank, use_container_width=True)
 
+st.caption(
+    "Interpretation: Larger Mean |SHAP| values indicate features that had stronger average influence on model predictions."
+)
 
 # SHAP images
 left, right = st.columns(2)
