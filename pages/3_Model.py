@@ -33,13 +33,15 @@ MODEL_COMPARISON_PATH = (
 )
 
 
-st.title("Model Results")
-st.markdown(
-    "14 models tested · Linear Regression champion · "
-    "CV-RMSE = 55.81 ± 10.02 min"
+page_header(
+    "Model Performance",
+    "Comparison of regression models for LA County emergency department wait-time prediction."
 )
-st.divider()
 
+m1, m2, m3 = st.columns(3)
+m1.metric("Models Tested", "14")
+m2.metric("Champion", "Linear Regression")
+m3.metric("CV-RMSE", "55.81 ± 10.02 min")
 
 # ---------------------------------------------------------
 # Cross-validation results
