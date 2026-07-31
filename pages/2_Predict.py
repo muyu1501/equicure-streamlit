@@ -21,13 +21,19 @@ st.set_page_config(
 )
 
 # ── Header ────────────────────────────────────────────────────────────────────
-st.title("Live ED Wait Time Prediction")
-st.markdown(
-    "Enter facility characteristics below. "
-    "The **champion Linear Regression model** (RMSE = 44.73 min) "
-    "will predict the median ED wait time for that facility."
+page_header(
+    "ED Wait-Time Prediction",
+    "Estimate facility-level median emergency department wait time using the champion baseline model."
 )
-st.divider()
+
+m1, m2, m3 = st.columns(3)
+m1.metric("Champion Model", "Linear Regression")
+m2.metric("Test RMSE", "44.73 min")
+m3.metric("LA County Median", "202 min")
+
+st.info(
+    "This tool is for research demonstration only. It estimates facility-level wait time and should not be used for individual patient care decisions."
+)
 
 # ── Load champion model (cached — only loads once) ────────────────────────────
 @st.cache_resource
@@ -206,9 +212,7 @@ if st.button("Predict Wait Time", type="primary",
         )
 
     # ── Feature contribution breakdown ───────────────────────────────────────
-    st.divider()
-    st.subheader("Feature Values Used for This Prediction")
-
+with st.expander("Feature values used for this prediction"):
     feature_summary = pd.DataFrame({
         "Feature":      ["Income Quartile", "Median Income",
                          "Ownership Type", "OP-18b Missing",
