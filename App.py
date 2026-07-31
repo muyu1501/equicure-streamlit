@@ -13,6 +13,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+from style import apply_global_style, page_header, sidebar_summary, COLOR
 
 st.set_page_config(
     page_title="EquiCure Research",
