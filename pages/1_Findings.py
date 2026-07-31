@@ -110,6 +110,8 @@ st.caption(
 )
 
 # SHAP images
+st.subheader("Model Explanation Visuals")
+
 left, right = st.columns(2)
 
 with left:
@@ -191,6 +193,11 @@ fig_sub.update_layout(
 )
 
 st.plotly_chart(fig_sub, use_container_width=True)
+
+st.warning(
+    "Subgroups above the dashed line exceed the pre-registered 15% fairness threshold. "
+    "These groups should be reviewed because the model may be less reliable for those facilities."
+)
 
 # st.caption(
 #     "The subgroup RMSE values above are placeholders and should be "
