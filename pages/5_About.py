@@ -19,6 +19,8 @@ st.set_page_config(
     layout="wide",
 )
 
+apply_global_style()
+sidebar_summary()
 
 # Replace this with the final public repository URL.
 # Example:
@@ -43,15 +45,6 @@ st.markdown(
     learning to healthcare-equity questions using
     public datasets.
 
-    ## The Team
-
-    | Role | Researcher | Responsibilities |
-    |---|---|---|
-    | R1 — Data Lead | Jiahao Liu | Data acquisition, cleaning, and merging |
-    | R2 — Modeling Lead | Yulin Pan | Model evaluation, champion selection, and SHAP analysis |
-    | R3 — Equity Lead | Jianrong Zhu | Pre-registered equity analysis and findings brief |
-    | R4 — Visualization Lead | Yihong Zhu | Visualizations, Streamlit app, and launch deck |
-
     ## Reproducibility
 
     The analysis uses five public datasets. The
@@ -62,6 +55,68 @@ st.markdown(
     reproduced.
     """
 )
+
+st.subheader("The Team")
+
+st.markdown(
+    "The project was completed through four coordinated research roles covering data, modeling, equity analysis, and visualization."
+)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown(
+        """
+        <div class="info-card">
+            <div class="info-card-title">R1 — Data Lead</div>
+            <div class="info-card-name">Jiahao Liu</div>
+            <div class="info-card-body">
+                Data acquisition, cleaning, and merging. This role focused on preparing the public datasets and verifying that the analysis dataset was usable.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
+        <div class="info-card">
+            <div class="info-card-title">R2 — Modeling Lead</div>
+            <div class="info-card-name">Yulin Pan</div>
+            <div class="info-card-body">
+                Model evaluation, champion selection, and SHAP analysis. This role focused on testing machine learning models and interpreting prediction performance.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+with col2:
+    st.markdown(
+        """
+        <div class="info-card">
+            <div class="info-card-title">R3 — Equity Lead</div>
+            <div class="info-card-name">Jianrong Zhu</div>
+            <div class="info-card-body">
+                Pre-registered equity analysis and findings brief. This role focused on subgroup performance and whether model error differed across equity-relevant groups.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        """
+        <div class="info-card">
+            <div class="info-card-title">R4 — Visualization Lead</div>
+            <div class="info-card-name">Yihong Zhu</div>
+            <div class="info-card-body">
+                Visualizations, Streamlit app, and launch deck. This role focused on communicating results through charts, the public-facing dashboard, and presentation materials.
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 # ---------------------------------------------------------
