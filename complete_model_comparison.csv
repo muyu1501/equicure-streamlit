@@ -1,0 +1,14 @@
+Model,RMSE,MAE,Notes
+Linear Regression,44.73,39.28,CHAMPION
+Ridge Regression,44.89,39.27,
+SVR (RBF kernel),49.46,40.88,Best non-linear
+Random Forest (default),54.9,48.42,Used for SHAP
+KNN (k=5),55.33,46.17,
+Random Forest (tuned),57.93,48.65,
+XGBoost (default),58.72,47.57,
+ElasticNet,61.26,51.38,
+Lasso Regression,61.32,51.42,
+Polynomial LR (degree=2),61.37,54.5,
+KNN (k=3),62.33,51.5,
+XGBoost (tuned),63.83,49.83,
+LightGBM (tuned),64.55,53.73,
