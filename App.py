@@ -20,7 +20,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
+st.title("EquiCure Research")
+st.markdown("**Machine learning-based emergency department wait-time analysis in Los Angeles County.**")
+st.divider()
 
 # Build the CSV path relative to app.py, not the terminal location.
 APP_DIR = Path(__file__).resolve().parent
@@ -75,6 +77,13 @@ st.info(
     "RMSE = 44.73 minutes; CV-RMSE = 55.81 minutes."
 )
 
+st.subheader("Project Overview")
+
+st.markdown("""
+EquiCure studies whether public healthcare data can be used to estimate emergency department wait times
+for Los Angeles County facilities. The project also evaluates whether model performance differs across
+equity-relevant groups such as income level, payer mix, and facility type.
+""")
 
 # Model performance chart
 st.subheader("Model Performance Overview")
@@ -113,6 +122,11 @@ fig.update_layout(
 
 st.plotly_chart(fig, use_container_width=True)
 
+st.subheader("Key Findings")
+
+st.success("Linear Regression was the strongest baseline model with RMSE = 44.73 minutes and MAE = 39.28 minutes.")
+st.info("More complex models such as Random Forest and XGBoost did not improve performance on the current dataset.")
+st.warning("Results are preliminary because only 58 facilities had valid OP-18b scores after cleaning.")
 
 # Dataset charts
 st.subheader("Data at a Glance")
