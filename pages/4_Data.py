@@ -20,6 +20,8 @@ st.set_page_config(
     layout="wide",
 )
 
+apply_global_style()
+sidebar_summary()
 
 page_header(
     "Data & Methods",
