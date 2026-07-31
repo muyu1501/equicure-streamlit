@@ -22,7 +22,7 @@ st.set_page_config(
 # Replace this with the final public repository URL.
 # Example:
 # GITHUB_URL = "https://github.com/username/repository"
-GITHUB_URL = ""
+GITHUB_URL = "https://github.com/AAAyuzhibo/Equi-Cure-Research"
 
 
 st.title("About This Research")
@@ -47,10 +47,10 @@ st.markdown(
 
     | Role | Researcher | Responsibilities |
     |---|---|---|
-    | R1 — Data Lead | [Name] | Data acquisition, cleaning, and merging |
-    | R2 — Modeling Lead | [Name] | Model evaluation, champion selection, and SHAP analysis |
-    | R3 — Equity Lead | [Name] | Pre-registered equity analysis and findings brief |
-    | R4 — Visualization Lead | [Name] | Visualizations, Streamlit app, and launch deck |
+    | R1 — Data Lead | Jiahao Liu | Data acquisition, cleaning, and merging |
+    | R2 — Modeling Lead | Yulin Pan | Model evaluation, champion selection, and SHAP analysis |
+    | R3 — Equity Lead | Jianrong Zhu | Pre-registered equity analysis and findings brief |
+    | R4 — Visualization Lead | Yihong Zhu | Visualizations, Streamlit app, and launch deck |
 
     ## Reproducibility
 
