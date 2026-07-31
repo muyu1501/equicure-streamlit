@@ -23,6 +23,8 @@ st.set_page_config(
     layout="wide",
 )
 
+apply_global_style()
+sidebar_summary()
 
 # Locate the main project folder.
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
