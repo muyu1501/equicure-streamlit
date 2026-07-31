@@ -21,12 +21,15 @@ st.set_page_config(
 )
 
 
-st.title("Data & Methods")
-st.markdown(
-    "5 public datasets · 58 LA County facilities · "
-    "All data openly available"
+page_header(
+    "Data & Methods",
+    "Public healthcare datasets used to build the LA County ED wait-time modeling dataset."
 )
-st.divider()
+
+d1, d2, d3 = st.columns(3)
+d1.metric("Public Datasets", "5")
+d2.metric("Valid Facilities", "58")
+d3.metric("Primary Outcome", "OP-18b")
 
 
 # ---------------------------------------------------------
