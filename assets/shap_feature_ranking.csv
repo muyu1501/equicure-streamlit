@@ -1,0 +1,13 @@
+Feature,Mean |SHAP|,Rank
+Ownership: Proprietary,94.875,1
+Ownership: Non-Profit Private,60.989,2
+Income Quartile (1=Lowest),23.358,3
+Ownership: Non-Profit Other,20.142,4
+Ownership: Non-Profit Church,17.35,5
+Median Household Income ($),13.812,6
+ZIP Code (CMS),7.364,7
+ZIP Code (Census),7.364,8
+Ownership: Local Government,1.347,9
+Ownership: State Government,0.824,10
+LA County Match Flag,0.0,11
+OP-18b Missing Flag,0.0,12
