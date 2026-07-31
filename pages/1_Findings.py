@@ -23,6 +23,8 @@ st.set_page_config(
     layout="wide",
 )
 
+apply_global_style()
+sidebar_summary()
 
 # Find the main project directory.
 # __file__ is pages/1_Findings.py, so parents[1] is the project root.
