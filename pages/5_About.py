@@ -26,11 +26,10 @@ st.set_page_config(
 GITHUB_URL = "https://github.com/AAAyuzhibo/Equi-Cure-Research"
 
 
-st.title("About This Research")
-st.markdown(
-    "EquiCure + LabLink Summer 2026 Research Program"
+page_header(
+    "About EquiCure",
+    "A student machine-learning research project focused on emergency care access and healthcare equity."
 )
-st.divider()
 
 
 st.markdown(
