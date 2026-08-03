@@ -71,7 +71,7 @@ c1, c2, c3, c4, c5 = st.columns(5)
 
 c1.metric("Facilities", "58")
 c2.metric("Champion RMSE", "44.73 min")
-c3.metric("CV-RMSE", "55.81 ± 10.02 min")
+c3.metric("CV-RMSE", "55.81±10")
 c4.metric("Models Tested", "14")
 c5.metric("Median Wait", "202 min")
 
