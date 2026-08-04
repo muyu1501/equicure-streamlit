@@ -31,7 +31,7 @@ page_header(
 
 m1, m2, m3 = st.columns(3)
 m1.metric("Champion Model", "Linear Regression")
-m2.metric("Test RMSE", "44.73 min")
+m2.metric("Holdout RMSE", "44.73 min")
 m3.metric("LA County Median", "202 min")
 
 st.info(
